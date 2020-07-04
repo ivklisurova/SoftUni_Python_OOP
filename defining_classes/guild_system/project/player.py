@@ -15,5 +15,5 @@ class Player:
     def player_info(self):
         result = f'Name: {self.name}\nGuild: {self.guild}\nHP: {self.hp}\nMP: {self.mp}\n'
         for k, v in self.skills.items():
-            result += f'=== {k} – {v}\n'
+            result += f'==={k} - {v}\n'
         return result

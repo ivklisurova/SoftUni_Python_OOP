@@ -4,7 +4,7 @@ class Guild:
         self.players = []
 
     def assign_player(self, player):
-        if player.guild == self.name:
+        if player in self.players:
             return f'Player {player.name} is already in the guild.'
         if player.guild != 'Unaffiliated':
             return f'Player {player.name} is in another guild.'
@@ -25,5 +25,4 @@ class Guild:
         for x in self.players:
             result += x.player_info()
         return result
-
 
