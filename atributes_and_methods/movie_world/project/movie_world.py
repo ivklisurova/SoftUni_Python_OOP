@@ -45,10 +45,12 @@ class MovieWorld:
         return result
 
     def add_customer(self, customer):
-        self.customers.append(customer)
+        if len(self.customers) < 10:
+            self.customers.append(customer)
 
     def add_dvd(self, dvd):
-        self.dvds.append(dvd)
+        if len(self.dvds) < 15:
+            self.dvds.append(dvd)
 
 # from atributes_and_methods.movie_world.project.customer import Customer
 # from atributes_and_methods.movie_world.project.dvd import DVD
