@@ -4,7 +4,8 @@ class Lion:
         self.gender = gender
         self.age = age
 
-    def get_needs(self):
+    @staticmethod
+    def get_needs():
         return 50
 
     def __repr__(self):

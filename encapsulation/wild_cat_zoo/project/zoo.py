@@ -56,17 +56,11 @@ class Zoo:
         c = [c for c in self.animals if c.__class__.__name__ == 'Cheetah']
         result = f'You have {len(self.animals)} animals\n'
         result += f'----- {len(l)} Lions:\n'
-        if l:
-            for x in l:
-                result += f'{x.__repr__()}\n'
+        result += '\n'.join([x.__repr__() for x in l]) + '\n'
         result += f'----- {len(t)} Tigers:\n'
-        if t:
-            for x in t:
-                result += f'{x.__repr__()}\n'
+        result += '\n'.join([x.__repr__() for x in t]) + '\n'
         result += f'----- {len(c)} Cheetahs:\n'
-        if c:
-            for x in c:
-                result += f'{x.__repr__()}\n'
+        result += '\n'.join([x.__repr__() for x in c])
         return result
 
     def workers_status(self):
@@ -75,16 +69,11 @@ class Zoo:
         v = [v for v in self.workers if v.__class__.__name__ == 'Vet']
         result = f'You have {len(self.workers)} workers\n'
         result += f'----- {len(k)} Keepers:\n'
-        if k:
-            for x in k:
-                result += f'{x.__repr__()}\n'
+        result += '\n'.join([x.__repr__() for x in k]) + '\n'
         result += f'----- {len(c)} Caretakers:\n'
-        if c:
-            for x in c:
-                result += f'{x.__repr__()}\n'
-        result += f'----- {len(v)} Vets\n'
-        if v:
-            for x in v:
-                result += f'{x.__repr__()}\n'
+        result += '\n'.join([x.__repr__() for x in c]) + '\n'
+        result += f'----- {len(v)} Vets:\n'
+        result += '\n'.join([x.__repr__() for x in v])
         return result
+
 

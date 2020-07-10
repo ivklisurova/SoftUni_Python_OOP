@@ -4,7 +4,8 @@ class Cheetah:
         self.gender = gender
         self.age = age
 
-    def get_needs(self):
+    @staticmethod
+    def get_needs():
         return 60
 
     def __repr__(self):
