@@ -62,7 +62,7 @@ class Tiger(Mammal):
             self.weight += food.quantity * 1.0
             self.food_eaten += food.quantity
             return
-        return f'{self.__class__.__name__} does not eat {food}!'
+        return f'{self.__class__.__name__} does not eat {food.__class__.__name__}!'
 
 
 # d = Dog('Doggy', 15, 'sofia')
